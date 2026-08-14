@@ -1,0 +1,3751 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Portal de treinamento interno da Loja Bezerra Autopeças. Capacitação para colaboradores em Atendimento, Excel Básico e Mecânica Automotiva.">
+
+    <meta name="keywords"
+        content="treinamento interno, EAD Bezerra Autopeças, curso mecânica automotiva, curso excel, atendimento ao cliente, capacitação de colaboradores">
+
+    <title>Treinamento Interno | Loja Bezerra Autopeças</title>
+
+
+    <!-- =====================================================
+         FONTES
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         ÍCONES
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         ESTILOS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            background: #070b12;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           CORES
+        ====================================================== */
+
+        :root {
+
+            --primary: #f5c400;
+
+            --primary-light: #ffd83d;
+
+            --primary-dark: #d4a900;
+
+            --dark: #070b12;
+
+            --dark-2: #0d131d;
+
+            --dark-3: #111a27;
+
+            --dark-4: #172233;
+
+            --white: #ffffff;
+
+            --gray: #aab4c3;
+
+            --gray-dark: #697586;
+
+            --border: rgba(255,255,255,0.09);
+
+            --blue: #1688ff;
+
+            --green: #20b66f;
+
+        }
+
+
+        /* =====================================================
+           CONTAINER
+        ====================================================== */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 76px;
+
+            z-index: 9999;
+
+            background: rgba(7,11,18,0.94);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+        .header-content {
+
+            height: 76px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            letter-spacing: -0.5px;
+
+        }
+
+        .logo-icon {
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--primary);
+
+            color: #000;
+
+            font-size: 21px;
+
+        }
+
+        .logo-text span {
+
+            color: var(--primary);
+
+        }
+
+        .logo-sub {
+
+            display: block;
+
+            font-size: 8px;
+
+            letter-spacing: 2px;
+
+            color: var(--primary);
+
+            margin-top: -3px;
+
+        }
+
+
+        /* MENU */
+
+        .nav-menu {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+            list-style: none;
+
+        }
+
+        .nav-menu a {
+
+            font-size: 13px;
+
+            color: #c7ced8;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+        .nav-menu a:hover {
+
+            color: var(--primary);
+
+        }
+
+
+        .nav-button {
+
+            border: 1px solid var(--primary);
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            color: var(--primary) !important;
+
+        }
+
+        .nav-button:hover {
+
+            background: var(--primary);
+
+            color: #000 !important;
+
+        }
+
+
+        /* MOBILE */
+
+        .mobile-button {
+
+            display: none;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #fff;
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            padding-top: 76px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+
+                    90deg,
+
+                    rgba(5,10,17,0.98) 0%,
+
+                    rgba(5,10,17,0.91) 42%,
+
+                    rgba(5,10,17,0.40) 72%,
+
+                    rgba(5,10,17,0.90) 100%
+
+                ),
+
+                url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            right: -180px;
+
+            top: 120px;
+
+            border-radius: 50%;
+
+            border: 80px solid rgba(245,196,0,0.06);
+
+        }
+
+        .hero-content {
+
+            max-width: 720px;
+
+            position: relative;
+
+            z-index: 2;
+
+            padding: 80px 0;
+
+        }
+
+
+        .hero-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 14px;
+
+            border-radius: 30px;
+
+            background: rgba(245,196,0,0.12);
+
+            border: 1px solid rgba(245,196,0,0.30);
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+
+        }
+
+        .hero h1 {
+
+            font-size: clamp(42px, 6vw, 72px);
+
+            line-height: 1.04;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .hero h1 span {
+
+            color: var(--primary);
+
+        }
+
+        .hero-description {
+
+            max-width: 650px;
+
+            color: #c5ced9;
+
+            font-size: 18px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        /* BOTÕES */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 14px 23px;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            border: none;
+
+            transition: .3s;
+
+        }
+
+        .btn-primary {
+
+            background: var(--primary);
+
+            color: #000;
+
+        }
+
+        .btn-primary:hover {
+
+            background: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+        .btn-outline {
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            color: #fff;
+
+            background: rgba(255,255,255,0.03);
+
+        }
+
+        .btn-outline:hover {
+
+            border-color: var(--primary);
+
+            color: var(--primary);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* HERO BENEFÍCIOS */
+
+        .hero-features {
+
+            display: flex;
+
+            gap: 35px;
+
+            flex-wrap: wrap;
+
+        }
+
+        .hero-feature {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+        }
+
+        .hero-feature-icon {
+
+            width: 43px;
+
+            height: 43px;
+
+            border-radius: 50%;
+
+            background: rgba(245,196,0,0.15);
+
+            color: var(--primary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+        .hero-feature strong {
+
+            display: block;
+
+            font-size: 13px;
+
+        }
+
+        .hero-feature small {
+
+            display: block;
+
+            color: #9da8b7;
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           BARRA DE INDICADORES
+        ====================================================== */
+
+        .stats {
+
+            background: var(--primary);
+
+            color: #000;
+
+            padding: 27px 0;
+
+        }
+
+        .stats-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            text-align: center;
+
+        }
+
+        .stat {
+
+            border-right: 1px solid rgba(0,0,0,0.15);
+
+        }
+
+        .stat:last-child {
+
+            border-right: 0;
+
+        }
+
+        .stat strong {
+
+            display: block;
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+        }
+
+        .stat span {
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================================
+           SEÇÕES
+        ====================================================== */
+
+        section {
+
+            padding: 100px 0;
+
+        }
+
+        .section-header {
+
+            max-width: 700px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+
+        }
+
+        .section-label {
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+        }
+
+        .section-header h2 {
+
+            font-size: clamp(30px,4vw,43px);
+
+            line-height: 1.15;
+
+            letter-spacing: -1px;
+
+            margin: 10px 0 15px;
+
+        }
+
+        .section-header p {
+
+            color: var(--gray);
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           SOBRE
+        ====================================================== */
+
+        .about {
+
+            background: var(--dark-2);
+
+        }
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+        .about-image {
+
+            position: relative;
+
+        }
+
+        .about-image img {
+
+            height: 480px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+        }
+
+        .about-image-badge {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            right: -25px;
+
+            background: var(--primary);
+
+            color: #000;
+
+            padding: 18px 22px;
+
+            border-radius: 12px;
+
+            font-weight: 900;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+
+        }
+
+        .about-content h2 {
+
+            font-size: 40px;
+
+            line-height: 1.15;
+
+            margin-bottom: 20px;
+
+        }
+
+        .about-content h2 span {
+
+            color: var(--primary);
+
+        }
+
+        .about-content p {
+
+            color: var(--gray);
+
+            margin-bottom: 17px;
+
+        }
+
+        .about-list {
+
+            list-style: none;
+
+            margin-top: 25px;
+
+        }
+
+        .about-list li {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 13px;
+
+            color: #dce2e9;
+
+            font-size: 14px;
+
+        }
+
+        .about-list i {
+
+            color: var(--primary);
+
+            margin-top: 5px;
+
+        }
+
+
+        /* =====================================================
+           CURSOS
+        ====================================================== */
+
+        .courses {
+
+            background: #080c13;
+
+        }
+
+        .courses-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 25px;
+
+        }
+
+        .course-card {
+
+            background: var(--dark-3);
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            transition: .35s;
+
+        }
+
+        .course-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(245,196,0,0.5);
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+
+        }
+
+        .course-image {
+
+            position: relative;
+
+            height: 235px;
+
+            overflow: hidden;
+
+        }
+
+        .course-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s;
+
+        }
+
+        .course-card:hover .course-image img {
+
+            transform: scale(1.07);
+
+        }
+
+        .course-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(
+
+                transparent 40%,
+
+                rgba(0,0,0,0.75)
+
+            );
+
+        }
+
+        .course-icon {
+
+            position: absolute;
+
+            bottom: 18px;
+
+            left: 18px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--primary);
+
+            color: #000;
+
+            font-size: 20px;
+
+        }
+
+        .course-content {
+
+            padding: 25px;
+
+        }
+
+        .course-tag {
+
+            color: var(--primary);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+        }
+
+        .course-content h3 {
+
+            font-size: 23px;
+
+            margin: 7px 0 12px;
+
+        }
+
+        .course-content p {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+            min-height: 65px;
+
+        }
+
+        .course-meta {
+
+            border-top: 1px solid var(--border);
+
+            margin-top: 20px;
+
+            padding-top: 17px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #9da8b7;
+
+            font-size: 12px;
+
+        }
+
+        .course-button {
+
+            margin-top: 20px;
+
+            width: 100%;
+
+            padding: 11px;
+
+            border-radius: 7px;
+
+            border: 1px solid rgba(245,196,0,0.4);
+
+            color: var(--primary);
+
+            background: transparent;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+        .course-button:hover {
+
+            background: var(--primary);
+
+            color: #000;
+
+        }
+
+
+        /* =====================================================
+           METODOLOGIA
+        ====================================================== */
+
+        .method {
+
+            background: var(--dark-2);
+
+        }
+
+        .method-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 20px;
+
+        }
+
+        .method-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 270px;
+
+            border-radius: 15px;
+
+            background: var(--dark-3);
+
+            border: 1px solid var(--border);
+
+            padding: 28px;
+
+        }
+
+        .method-number {
+
+            font-size: 55px;
+
+            font-weight: 900;
+
+            color: rgba(245,196,0,0.10);
+
+            position: absolute;
+
+            top: 5px;
+
+            right: 15px;
+
+        }
+
+        .method-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            background: var(--primary);
+
+            color: #000;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 20px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .method-card h3 {
+
+            margin-bottom: 10px;
+
+        }
+
+        .method-card p {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           BENEFÍCIOS COM IMAGEM
+        ====================================================== */
+
+        .benefits {
+
+            background: #080c13;
+
+        }
+
+        .benefits-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+        .benefits-image {
+
+            position: relative;
+
+        }
+
+        .benefits-image img {
+
+            height: 500px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+        }
+
+        .benefits-content h2 {
+
+            font-size: 40px;
+
+            line-height: 1.15;
+
+            margin-bottom: 30px;
+
+        }
+
+        .benefits-content h2 span {
+
+            color: var(--primary);
+
+        }
+
+        .benefit-item {
+
+            display: flex;
+
+            gap: 17px;
+
+            margin-bottom: 23px;
+
+        }
+
+        .benefit-icon {
+
+            min-width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            background: rgba(245,196,0,0.12);
+
+            color: var(--primary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+        .benefit-item h3 {
+
+            font-size: 16px;
+
+            margin-bottom: 3px;
+
+        }
+
+        .benefit-item p {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           EQUIPE / TREINAMENTO
+        ====================================================== */
+
+        .training {
+
+            position: relative;
+
+            background:
+
+                linear-gradient(
+
+                    rgba(7,11,18,0.88),
+
+                    rgba(7,11,18,0.94)
+
+                ),
+
+                url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            text-align: center;
+
+        }
+
+        .training-content {
+
+            max-width: 800px;
+
+            margin: auto;
+
+        }
+
+        .training h2 {
+
+            font-size: clamp(32px,5vw,52px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+
+        }
+
+        .training h2 span {
+
+            color: var(--primary);
+
+        }
+
+        .training p {
+
+            color: #c4ccd6;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .cta {
+
+            padding: 80px 0;
+
+            background: var(--primary);
+
+            color: #000;
+
+        }
+
+        .cta-grid {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+        }
+
+        .cta h2 {
+
+            font-size: 40px;
+
+            line-height: 1.1;
+
+            max-width: 650px;
+
+        }
+
+        .cta p {
+
+            margin-top: 12px;
+
+            max-width: 650px;
+
+        }
+
+        .cta .btn {
+
+            background: #000;
+
+            color: #fff;
+
+            white-space: nowrap;
+
+        }
+
+        .cta .btn:hover {
+
+            background: #222;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           CONTATO
+        ====================================================== */
+
+        .contact {
+
+            background: var(--dark-2);
+
+        }
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 70px;
+
+        }
+
+        .contact-info h2 {
+
+            font-size: 40px;
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+
+        }
+
+        .contact-info h2 span {
+
+            color: var(--primary);
+
+        }
+
+        .contact-info > p {
+
+            color: var(--gray);
+
+            margin-bottom: 30px;
+
+        }
+
+        .contact-item {
+
+            display: flex;
+
+            gap: 15px;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+        }
+
+        .contact-icon {
+
+            min-width: 48px;
+
+            height: 48px;
+
+            border-radius: 10px;
+
+            background: var(--dark-4);
+
+            color: var(--primary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+        .contact-item strong {
+
+            display: block;
+
+            font-size: 13px;
+
+        }
+
+        .contact-item span {
+
+            display: block;
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+        }
+
+
+        /* FORMULÁRIO */
+
+        .contact-form {
+
+            background: var(--dark-3);
+
+            border: 1px solid var(--border);
+
+            padding: 30px;
+
+            border-radius: 16px;
+
+        }
+
+        .contact-form h3 {
+
+            margin-bottom: 25px;
+
+            font-size: 22px;
+
+        }
+
+        .form-group {
+
+            margin-bottom: 17px;
+
+        }
+
+        .form-group label {
+
+            display: block;
+
+            font-size: 12px;
+
+            color: #c7ced8;
+
+            margin-bottom: 7px;
+
+        }
+
+        .form-control {
+
+            width: 100%;
+
+            background: #080d15;
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            border-radius: 7px;
+
+            color: #fff;
+
+            padding: 13px;
+
+            outline: none;
+
+        }
+
+        .form-control:focus {
+
+            border-color: var(--primary);
+
+        }
+
+        textarea.form-control {
+
+            resize: vertical;
+
+            min-height: 120px;
+
+        }
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: #04070b;
+
+            border-top: 1px solid var(--border);
+
+            padding: 60px 0 25px;
+
+        }
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+            gap: 45px;
+
+            padding-bottom: 40px;
+
+        }
+
+        .footer-description {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+            max-width: 300px;
+
+            margin-top: 15px;
+
+        }
+
+        .footer-column h4 {
+
+            color: #fff;
+
+            font-size: 13px;
+
+            margin-bottom: 18px;
+
+        }
+
+        .footer-column ul {
+
+            list-style: none;
+
+        }
+
+        .footer-column li {
+
+            margin-bottom: 10px;
+
+        }
+
+        .footer-column a {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+            transition: .3s;
+
+        }
+
+        .footer-column a:hover {
+
+            color: var(--primary);
+
+        }
+
+        .socials {
+
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 20px;
+
+        }
+
+        .social {
+
+            width: 35px;
+
+            height: 35px;
+
+            border-radius: 50%;
+
+            background: var(--dark-3);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #fff;
+
+            transition: .3s;
+
+        }
+
+        .social:hover {
+
+            background: var(--primary);
+
+            color: #000;
+
+        }
+
+        .copyright {
+
+            border-top: 1px solid var(--border);
+
+            padding-top: 20px;
+
+            color: #687383;
+
+            font-size: 11px;
+
+            text-align: center;
+
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ====================================================== */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 22px;
+
+            bottom: 22px;
+
+            width: 58px;
+
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #20c967;
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 26px;
+
+            z-index: 9998;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.4);
+
+            transition: .3s;
+
+        }
+
+        .whatsapp:hover {
+
+            transform: scale(1.1);
+
+        }
+
+
+        /* =====================================================
+           ANIMAÇÕES
+        ====================================================== */
+
+        .fade-up {
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition: .8s ease;
+
+        }
+
+        .fade-up.visible {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+        ====================================================== */
+
+        @media(max-width: 1000px) {
+
+            .nav-menu {
+
+                position: absolute;
+
+                top: 76px;
+
+                left: 0;
+
+                width: 100%;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 25px;
+
+                background: #080c13;
+
+                border-bottom: 1px solid var(--border);
+
+            }
+
+            .nav-menu.active {
+
+                display: flex;
+
+            }
+
+            .mobile-button {
+
+                display: block;
+
+            }
+
+            .method-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+            .courses-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+        }
+
+
+        @media(max-width: 750px) {
+
+            section {
+
+                padding: 75px 0;
+
+            }
+
+            .hero {
+
+                min-height: auto;
+
+            }
+
+            .hero-content {
+
+                padding: 80px 0;
+
+            }
+
+            .hero h1 {
+
+                letter-spacing: -2px;
+
+            }
+
+            .hero-features {
+
+                gap: 18px;
+
+            }
+
+            .stats-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+                gap: 20px;
+
+            }
+
+            .stat {
+
+                border-right: 0;
+
+            }
+
+            .about-grid,
+
+            .benefits-grid,
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+
+            }
+
+            .about-image img,
+
+            .benefits-image img {
+
+                height: 350px;
+
+            }
+
+            .about-image-badge {
+
+                right: 15px;
+
+            }
+
+            .courses-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .method-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .cta-grid {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media(max-width: 500px) {
+
+            .container {
+
+                width: 92%;
+
+            }
+
+            .hero h1 {
+
+                font-size: 40px;
+
+            }
+
+            .hero-description {
+
+                font-size: 15px;
+
+            }
+
+            .hero-buttons {
+
+                flex-direction: column;
+
+            }
+
+            .hero-buttons .btn {
+
+                width: 100%;
+
+            }
+
+            .hero-features {
+
+                flex-direction: column;
+
+            }
+
+            .stats-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .form-row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .cta h2 {
+
+                font-size: 30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="container header-content">
+
+
+        <a href="#inicio" class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </div>
+
+            <div class="logo-text">
+
+                BEZERRA<span>AUTOPEÇAS</span>
+
+                <small class="logo-sub">
+                    TREINAMENTO INTERNO
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <button
+                class="mobile-button"
+                id="mobileButton"
+                aria-label="Abrir menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+
+                <li>
+                    <a href="#metodologia">Metodologia</a>
+                </li>
+
+                <li>
+                    <a href="#beneficios">Benefícios</a>
+                </li>
+
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="nav-button">
+                        <i class="fa-solid fa-user"></i>
+                        Acessar Plataforma
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="container">
+
+        <div class="hero-content fade-up">
+
+            <div class="hero-label">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                Treinamento Interno EAD
+
+            </div>
+
+
+            <h1>
+
+                Capacitação que
+                <span>move resultados.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Cursos e treinamentos internos EAD
+                desenvolvidos exclusivamente para a
+                equipe da Loja Bezerra Autopeças.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#cursos" class="btn btn-primary">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Conhecer os cursos
+
+                </a>
+
+
+                <a href="#contato" class="btn btn-outline">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    Solicitar treinamento
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-features">
+
+
+                <div class="hero-feature">
+
+                    <div class="hero-feature-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Aprendizado flexível
+                        </strong>
+
+                        <small>
+                            Estude quando e onde quiser
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-feature">
+
+                    <div class="hero-feature-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Conteúdo prático
+                        </strong>
+
+                        <small>
+                            Focado na rotina automotiva
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-feature">
+
+                    <div class="hero-feature-icon">
+
+                        <i class="fa-solid fa-award"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Desenvolvimento
+                        </strong>
+
+                        <small>
+                            Mais conhecimento e resultados
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ESTATÍSTICAS
+========================================================= -->
+
+<div class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+
+            <strong>03</strong>
+
+            <span>
+                Cursos especializados
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>100%</strong>
+
+            <span>
+                Online
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>24h</strong>
+
+            <span>
+                Acesso aos conteúdos
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>100%</strong>
+
+            <span>
+                Foco em autopeças
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SOBRE
+========================================================= -->
+
+<section class="about" id="sobre">
+
+    <div class="container about-grid">
+
+
+        <div class="about-image fade-up">
+
+            <img
+                src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1200&q=85"
+                alt="Profissional trabalhando em oficina automotiva"
+                loading="lazy"
+            >
+
+
+            <div class="about-image-badge">
+
+                <i class="fa-solid fa-car"></i>
+
+                Foco no setor automotivo
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content fade-up">
+
+            <div class="section-label">
+                SOBRE O TREINAMENTO
+            </div>
+
+
+            <h2>
+
+                Conhecimento desenvolvido
+                <span>para a realidade da Loja Bezerra Autopeças.</span>
+
+            </h2>
+
+
+            <p>
+
+                Uma equipe bem preparada é um dos principais
+                diferenciais da nossa loja.
+
+            </p>
+
+
+            <p>
+
+                A Loja Bezerra Autopeças oferece treinamentos EAD
+                internos direcionados aos colaboradores que
+                trabalham diariamente com clientes, produtos,
+                sistemas, processos e conhecimentos técnicos
+                automotivos.
+
+            </p>
+
+
+            <ul class="about-list">
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Conteúdo direcionado à rotina da loja.
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Treinamentos acessíveis pelo computador ou celular.
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Possibilidade de personalização dos conteúdos.
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Desenvolvimento contínuo dos colaboradores.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CURSOS
+========================================================= -->
+
+<section class="courses" id="cursos">
+
+    <div class="container">
+
+
+        <div class="section-header fade-up">
+
+            <div class="section-label">
+                NOSSOS CURSOS
+            </div>
+
+            <h2>
+                Conhecimento que faz a diferença
+            </h2>
+
+            <p>
+
+                Capacitação prática para profissionais
+                da equipe da Loja Bezerra Autopeças.
+
+            </p>
+
+        </div>
+
+
+        <div class="courses-grid">
+
+
+            <!-- =================================================
+                 ATENDIMENTO
+            ================================================== -->
+
+            <article class="course-card fade-up">
+
+                <div class="course-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Atendimento ao cliente"
+                        loading="lazy"
+                    >
+
+                    <div class="course-overlay"></div>
+
+
+                    <div class="course-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="course-content">
+
+                    <div class="course-tag">
+                        CURSO 01
+                    </div>
+
+
+                    <h3>
+                        Atendimento
+                    </h3>
+
+
+                    <p>
+
+                        Desenvolva técnicas para oferecer um
+                        atendimento profissional, eficiente e
+                        focado na satisfação do cliente.
+
+                    </p>
+
+
+                    <div class="course-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-book"></i>
+
+                            Básico
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            10 horas
+
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="curso-atendimento.html"
+                        class="course-button">
+
+                        Iniciar curso
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 EXCEL
+            ================================================== -->
+
+            <article class="course-card fade-up">
+
+                <div class="course-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85"
+                        alt="Planilha e análise de dados no computador"
+                        loading="lazy"
+                    >
+
+                    <div class="course-overlay"></div>
+
+
+                    <div class="course-icon">
+
+                        <i class="fa-solid fa-table-cells-large"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="course-content">
+
+                    <div class="course-tag">
+                        CURSO 02
+                    </div>
+
+
+                    <h3>
+                        Excel Básico
+                    </h3>
+
+
+                    <p>
+
+                        Aprenda os principais recursos do Excel
+                        para organizar informações, criar
+                        controles e melhorar sua produtividade.
+
+                    </p>
+
+
+                    <div class="course-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-book"></i>
+
+                            Básico
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            12 horas
+
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="course-button"
+                        onclick="selecionarCurso('Excel Básico')">
+
+                        Iniciar curso
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MECÂNICA
+            ================================================== -->
+
+            <article class="course-card fade-up">
+
+                <div class="course-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Mecânico trabalhando em veículo"
+                        loading="lazy"
+                    >
+
+                    <div class="course-overlay"></div>
+
+
+                    <div class="course-icon">
+
+                        <i class="fa-solid fa-wrench"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="course-content">
+
+                    <div class="course-tag">
+                        CURSO 03
+                    </div>
+
+
+                    <h3>
+                        Mecânica Automotiva
+                    </h3>
+
+
+                    <p>
+
+                        Conheça os principais sistemas do veículo,
+                        componentes, funcionamento e conceitos
+                        fundamentais de mecânica.
+
+                    </p>
+
+
+                    <div class="course-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-book"></i>
+
+                            Técnico
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            30 horas
+
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="course-button"
+                        onclick="selecionarCurso('Mecânica Automotiva')">
+
+                        Iniciar curso
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     METODOLOGIA
+========================================================= -->
+
+<section class="method" id="metodologia">
+
+    <div class="container">
+
+
+        <div class="section-header fade-up">
+
+            <div class="section-label">
+                COMO FUNCIONA
+            </div>
+
+            <h2>
+                Uma metodologia simples e prática
+            </h2>
+
+            <p>
+
+                O colaborador aprende, pratica e transforma
+                conhecimento em resultado.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-grid">
+
+
+            <div class="method-card fade-up">
+
+                <div class="method-number">
+                    01
+                </div>
+
+                <div class="method-icon">
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                </div>
+
+                <h3>
+                    Acesse
+                </h3>
+
+                <p>
+
+                    O colaborador acessa a plataforma através
+                    do computador, tablet ou celular.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card fade-up">
+
+                <div class="method-number">
+                    02
+                </div>
+
+                <div class="method-icon">
+
+                    <i class="fa-solid fa-play"></i>
+
+                </div>
+
+                <h3>
+                    Estude
+                </h3>
+
+                <p>
+
+                    Conteúdos organizados em módulos e aulas
+                    de fácil compreensão.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card fade-up">
+
+                <div class="method-number">
+                    03
+                </div>
+
+                <div class="method-icon">
+
+                    <i class="fa-solid fa-pen-to-square"></i>
+
+                </div>
+
+                <h3>
+                    Pratique
+                </h3>
+
+                <p>
+
+                    Exercícios, atividades e avaliações para
+                    verificar o aprendizado.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card fade-up">
+
+                <div class="method-number">
+                    04
+                </div>
+
+                <div class="method-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>
+                    Evolua
+                </h3>
+
+                <p>
+
+                    A empresa acompanha o desenvolvimento
+                    e evolução dos colaboradores.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BENEFÍCIOS
+========================================================= -->
+
+<section class="benefits" id="beneficios">
+
+    <div class="container benefits-grid">
+
+
+        <div class="benefits-image fade-up">
+
+            <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+                alt="Equipe trabalhando em conjunto"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="benefits-content fade-up">
+
+            <div class="section-label">
+                POR QUE TREINAR?
+            </div>
+
+
+            <h2>
+
+                Desenvolva pessoas.
+                <span>Melhore processos.</span>
+
+            </h2>
+
+
+            <div class="benefit-item">
+
+                <div class="benefit-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Equipe mais preparada
+                    </h3>
+
+                    <p>
+
+                        Profissionais com maior conhecimento
+                        para executar suas atividades.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <div class="benefit-icon">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Mais produtividade
+                    </h3>
+
+                    <p>
+
+                        Conhecimento aplicado no dia a dia
+                        ajuda a otimizar processos.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <div class="benefit-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Padronização
+                    </h3>
+
+                    <p>
+
+                        Todos os colaboradores podem receber
+                        o mesmo padrão de treinamento.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <div class="benefit-icon">
+
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Redução de erros
+                    </h3>
+
+                    <p>
+
+                        Processos mais claros ajudam a reduzir
+                        falhas e retrabalho.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TREINAMENTO INTERNO
+========================================================= -->
+
+<section class="training">
+
+    <div class="container">
+
+        <div class="training-content fade-up">
+
+            <div class="section-label">
+                TREINAMENTO INTERNO
+            </div>
+
+
+            <h2>
+
+                Transforme conhecimento em
+                <span>resultados reais.</span>
+
+            </h2>
+
+
+            <p>
+
+                Crie uma cultura de desenvolvimento contínuo
+                dentro da Loja Bezerra Autopeças através de
+                treinamentos personalizados para a realidade
+                do nosso dia a dia.
+
+            </p>
+
+
+            <a href="#contato" class="btn btn-primary">
+
+                <i class="fa-solid fa-comments"></i>
+
+                Fale com nossa equipe
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div class="container cta-grid">
+
+        <div>
+
+            <h2>
+                Sua equipe está preparada para o próximo nível?
+            </h2>
+
+            <p>
+
+                Implemente uma rotina de treinamento e
+                desenvolvimento dentro da nossa loja.
+
+            </p>
+
+        </div>
+
+
+        <a href="#contato" class="btn">
+
+            Acessar treinamentos
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTATO
+========================================================= -->
+
+<section class="contact" id="contato">
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-info fade-up">
+
+            <div class="section-label">
+                FALE CONOSCO
+            </div>
+
+
+            <h2>
+
+                Vamos desenvolver sua
+                <span>equipe?</span>
+
+            </h2>
+
+
+            <p>
+
+                Entre em contato com o RH para tirar dúvidas sobre
+                os treinamentos ou solicitar acesso à
+                plataforma.
+
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <span>
+                        (00) 00000-0000
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        E-mail
+                    </strong>
+
+                    <span>
+                        treinamento@bezerraautopecas.com.br
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Atendimento
+                    </strong>
+
+                    <span>
+                        Treinamentos internos
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORMULÁRIO -->
+
+        <form
+            class="contact-form fade-up"
+            id="contactForm"
+        >
+
+            <h3>
+                Solicite informações
+            </h3>
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="nome"
+                        placeholder="Seu nome"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Setor
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="empresa"
+                        placeholder="Ex: Vendas, Estoque, Oficina"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="seu@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        class="form-control"
+                        id="telefone"
+                        placeholder="(00) 00000-0000"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Curso de interesse
+                </label>
+
+                <select
+                    class="form-control"
+                    id="curso"
+                >
+
+                    <option value="">
+                        Selecione um curso
+                    </option>
+
+                    <option>
+                        Atendimento ao Cliente
+                    </option>
+
+                    <option>
+                        Excel Básico
+                    </option>
+
+                    <option>
+                        Mecânica Automotiva
+                    </option>
+
+                    <option>
+                        Todos os cursos
+                    </option>
+
+                    <option>
+                        Treinamento personalizado
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Mensagem
+                </label>
+
+                <textarea
+                    class="form-control"
+                    id="mensagem"
+                    placeholder="Digite sua mensagem..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width:100%;"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Solicitar informações
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <!-- EMPRESA -->
+
+            <div>
+
+                <a href="#inicio" class="logo">
+
+                    <div class="logo-icon">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </div>
+
+                    <div class="logo-text">
+
+                        BEZERRA<span>AUTOPEÇAS</span>
+
+                        <small class="logo-sub">
+                            TREINAMENTO INTERNO
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Portal de cursos e treinamentos
+                    internos EAD para os colaboradores
+                    da Loja Bezerra Autopeças.
+
+                </p>
+
+
+                <div class="socials">
+
+                    <a href="#" class="social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="social">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="social">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <div class="footer-column">
+
+                <h4>
+                    NAVEGAÇÃO
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#inicio">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre">
+                            Sobre nós
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#cursos">
+                            Cursos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#beneficios">
+                            Benefícios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- CURSOS -->
+
+            <div class="footer-column">
+
+                <h4>
+                    CURSOS
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#cursos">
+                            Atendimento
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#cursos">
+                            Excel Básico
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#cursos">
+                            Mecânica Automotiva
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">
+                            Treinamentos personalizados
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- CONTATO -->
+
+            <div class="footer-column">
+
+                <h4>
+                    CONTATO
+                </h4>
+
+                <ul>
+
+                    <li>
+
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            (00) 00000-0000
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i>
+                            treinamento@bezerraautopecas.com.br
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Atendimento online
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Loja Bezerra Autopeças.
+            Todos os direitos reservados.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     WHATSAPP FLUTUANTE
+========================================================= -->
+
+<a
+    href="#"
+    class="whatsapp"
+    id="whatsappButton"
+    aria-label="Falar pelo WhatsApp"
+>
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+    /* =====================================================
+       CONFIGURAÇÃO
+    ====================================================== */
+
+    const WHATSAPP =
+        "5500000000000";
+
+
+    /* =====================================================
+       MENU MOBILE
+    ====================================================== */
+
+    const mobileButton =
+        document.getElementById("mobileButton");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    mobileButton.addEventListener(
+        "click",
+        function () {
+
+            navMenu.classList.toggle("active");
+
+            const icon =
+                mobileButton.querySelector("i");
+
+            if (navMenu.classList.contains("active")) {
+
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+
+                icon.classList.add("fa-bars");
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       FECHAR MENU
+    ====================================================== */
+
+    document
+        .querySelectorAll(".nav-menu a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    navMenu.classList.remove("active");
+
+                    const icon =
+                        mobileButton.querySelector("i");
+
+                    icon.classList.remove("fa-xmark");
+
+                    icon.classList.add("fa-bars");
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       SELECIONAR CURSO
+    ====================================================== */
+
+    function selecionarCurso(curso) {
+
+        const select =
+            document.getElementById("curso");
+
+        select.value = curso;
+
+        document
+            .getElementById("contato")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    /* =====================================================
+       FORMULÁRIO
+    ====================================================== */
+
+    document
+        .getElementById("contactForm")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const nome =
+                    document.getElementById("nome").value;
+
+                const empresa =
+                    document.getElementById("empresa").value;
+
+                const email =
+                    document.getElementById("email").value;
+
+                const telefone =
+                    document.getElementById("telefone").value;
+
+                const curso =
+                    document.getElementById("curso").value;
+
+                const mensagem =
+                    document.getElementById("mensagem").value;
+
+
+                const texto =
+
+                    "Olá! Gostaria de obter informações sobre os treinamentos.%0A%0A" +
+
+                    "*Nome:* " +
+                    nome +
+
+                    "%0A*Setor:* " +
+                    empresa +
+
+                    "%0A*E-mail:* " +
+                    email +
+
+                    "%0A*Telefone:* " +
+                    telefone +
+
+                    "%0A*Curso:* " +
+                    curso +
+
+                    "%0A%0A*Mensagem:*%0A" +
+
+                    mensagem;
+
+
+                const url =
+                    "https://wa.me/" +
+                    WHATSAPP +
+                    "?text=" +
+                    texto;
+
+
+                window.open(
+                    url,
+                    "_blank"
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       WHATSAPP
+    ====================================================== */
+
+    document
+        .getElementById("whatsappButton")
+        .addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+                window.open(
+                    "https://wa.me/" + WHATSAPP,
+                    "_blank"
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       ANIMAÇÕES AO ROLAR
+    ====================================================== */
+
+    const observer =
+        new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(
+                    function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target
+                                .classList
+                                .add("visible");
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    document
+        .querySelectorAll(".fade-up")
+        .forEach(
+            function(element) {
+
+                observer.observe(element);
+
+            }
+        );
+
+
+    /* =====================================================
+       ANO AUTOMÁTICO
+    ====================================================== */
+
+    console.log(
+        "Portal de Treinamento Interno - Loja Bezerra Autopeças carregado com sucesso."
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
